@@ -16,11 +16,7 @@
 		
 		stmt = conn.createStatement();
 	
-		out.println("test?");
+		/* out.println("test?"); */
 %>
-<!-- stmt  ê°ì²´ ìì±
-Statement í´ëì¤ : sql ë¬¸ì ì¤ííê¸° ìí´ Statement í´ëì¤ ì´ì©
-ë°ì´í° ê²ìì ìí´ executeQuery()ë©ìëë¥¼ ì¬ì©íëë°, ì¶ê°, ìì  ì­ì ì ê°ì ë°ì´í° ë³ê²½ì
- executeQuery()ë©ìë ì¬ì© ê°ë¥í¨-->
 </body>
 </html>
