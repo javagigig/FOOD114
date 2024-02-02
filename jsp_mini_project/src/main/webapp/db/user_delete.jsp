@@ -10,11 +10,11 @@
 	<%@ include file="dbconn.jsp"%>
 	
 	<%
-		String id = request.getParameter("id");
+		String userId = request.getParameter("userId");
 	
 		String sql
-			= "DELETE FROM TBL_MEMBER "
-			+ "WHERE USERID = '" + id + "'";
+			= "DELETE FROM PSY_USER "
+			+ "WHERE USERID = '" + userId + "'";
 		
 		int cnt = stmt.executeUpdate(sql);
 		

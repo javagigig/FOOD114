@@ -11,7 +11,7 @@
 	<%
 		String userId = request.getParameter("userId");
 		String sql
-			= "SELECT * FROM TBL_MEMBER "
+			= "SELECT * FROM PSY_USER "
 			+ "WHERE USERID = '" + userId + "'";
 		ResultSet rs = stmt.executeQuery(sql);
 		rs.next();
@@ -19,8 +19,12 @@
 	<form action="user_update_result.jsp">
 		<input name="userId" value="<%= rs.getString("USERID")%>" hidden>
 		<div>아이디: <input value="<%= rs.getString("USERID")%>" disabled></div>
-		<div>이름: <input name="userName" value="<%= rs.getString("USERNAME")%>"></div>
-		<div>핸드폰번호: <input name="phone" value="<%= rs.getString("phone")%>"></div>
+		<div>이름: <input name="userName" value="<%= rs.getString("NAME")%>"></div>
+		<div>이메일: <input name="email" value="<%= rs.getString("EMAIL")%>"></div>
+		<div>핸드폰번호: <input name="phone" value="<%= rs.getString("PHONE")%>"></div>
+		<div>주소1<input name="city" value="<%= rs.getString("CITY")%>"></div>
+		<div>주소2<input name="district" value="<%= rs.getString("DISTRICT")%>"></div>
+		<div>주소3<input name="d_addless" value="<%= rs.getString("DETAIL_ADDRESS")%>"></div>
 		<div>성별:
 		<%
 			if(rs.getString("GENDER").equals("남성")){
@@ -35,11 +39,6 @@
 		<%
 			}
 		 %>
-		 <div>
-		 운동<input name="hobby1" value="<%= rs.getString("HOBBY1")%>" type="checkbox">
-		 독서<input name="hobby2" value="<%= rs.getString("HOBBY2")%>" type="checkbox">
-		 영화<input name="hobby3" value="<%= rs.getString("HOBBY3")%>" type="checkbox">
-		 </div>
 		 <div><input type="submit" value="수정하기"></div>
 	</form>
 

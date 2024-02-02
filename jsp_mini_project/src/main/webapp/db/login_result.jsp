@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ include file="dbconn.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +7,7 @@
 <title>Login Result</title>
 </head>
 <body>
-    <%@ include file="dbconn.jsp" %>
+   
     <%
         String userId = request.getParameter("USERID");
         String pwd = request.getParameter("PASSWORD");
@@ -25,6 +25,7 @@
             if(loginAttempts >= 4){
                 out.println("비밀번호 5번 이상 실패! 관리자 문의 하세요");
             } else {
+            	
                 out.println("로그인 성공!");
                 
                 // 로그인 성공 시 카운트 초기화
