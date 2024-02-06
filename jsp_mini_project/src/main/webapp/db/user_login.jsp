@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="../css/style.css">
 </head>
+<link rel="stylesheet" href="../css/user_login.css">
 <body>
     <%@ include file="dbconn.jsp" %>
     <form action="user_login_view.jsp" name="login">
@@ -31,10 +31,16 @@
         function fnLogin() {
             var form = document.login;
             var loginFlg = document.querySelector('input[name="status"]:checked').id;
-            if (loginFlg === "user") {
+            var userId = form.id.value;
+            var password = form.pwd.value;
+
+            if (loginFlg === "user" && userId === "user1" && password === "pw1234") {
                 form.action = "main.jsp"; // 일반 유저 로그인 페이지
-            } else if (loginFlg === "admin") {
+            } else if (loginFlg === "admin" && userId === "admin" && password === "admin") {
                 form.action = "crm_login_page.jsp"; // 관리자 로그인 페이지
+            } else {
+                alert("아이디 또는 비밀번호가 올바르지 않습니다.");
+                return false;
             }
             // 폼 전송
             form.submit();

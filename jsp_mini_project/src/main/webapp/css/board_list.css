@@ -1,0 +1,27 @@
+@charset "UTF-8";
+	table, tr, td, th {
+		border : 1px solid black;
+		padding : 5px 10px;
+		border-collapse: collapse;
+		text-align: center;
+	}
+	th {
+		background-color: #eee;
+	}
+	a{
+		color : black;
+		font-weight: bold;
+		text-decoration : none;
+	}
+	a:visited {
+		color : black;
+	}
+	a:hover {
+		color : blue;
+	}
+	.search {
+		margin: 10px;
+		text-align: center;
+	}
+	
+	

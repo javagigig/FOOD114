@@ -5,25 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-	table, tr, td {
-		border : 1px solid #d3d0d0;
-		padding : 5px 10px;
-		border-collapse: collapse;
-		text-align: center;
-	}
-	th {
-		background-color: rgb(170, 125, 170);
-		/* border : 1px solid white; */
-		color:white;
-	}
-	
-	.search {
-		margin: 10px;
-		text-align: center;
-	}
-</style>
 </head>
+<link rel="stylesheet" href="../css/m_user.css">
 <body>
 	<%@ include file="dbconn.jsp" %>
 	
@@ -31,8 +14,7 @@
 		/* out.println(session.getAttribute("userId"));   ==> null 값 나옴*/
 		String sql = "SELECT * FROM PSY_USER";
 		String keyword = request.getParameter("keyword");
-		
-		if(keyword != null){
+		if(keyword != null){	
 			sql += " WHERE NAME LIKE '%" + keyword + "%'"
 					+ " OR USERID LIKE '%" + keyword + "%'"
 					;
@@ -45,7 +27,7 @@
 	<form name="m_user">
 		<div class="search"> 검색어: 
 			<input type="text" name="keyword" value="<%= keyword %>">
-			<input type="button" value="회원검색" onclick="search()">
+			<input type="submit" value="회원검색" onclick="search()">
 		</div>
 	<table border="1">
 		<tr>
@@ -63,6 +45,7 @@
 			<th>휴면여부</th>
 			<th>회원정보 수정</th>
 			<th>회원정보 삭제</th>
+			<th>회원정보 초기화</th>
 		</tr>
 	<%
 		while(rs.next()){
@@ -120,9 +103,9 @@
 		location.href="user_Init.jsp?userId=" + userId;
 	}
 	
-	var user = document.user_list;
+	var user = document.m_user;
 	function search() {
-		location.href = "user_list.jsp?keyword=" + user.keyword.value;
+		location.href = "m_user.jsp?keyword=" + user.keyword.value;
 	}
 
 </script>

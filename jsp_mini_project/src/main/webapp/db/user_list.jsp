@@ -21,7 +21,7 @@
 <body>
 	<%@ include file="dbconn.jsp"%>
 	<%
-		String sql = "SELECT * FROM TBL_MEMBER";
+		String sql = "SELECT * FROM PSY_USER";
 		ResultSet rs = stmt.executeQuery(sql);
 	%>
 	<!-- 	아이디	이름	핸드폰번호	성별	취미1	취미2	취미3 -->

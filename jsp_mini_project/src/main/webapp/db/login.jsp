@@ -6,97 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color:white;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 630px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            text-align: center;
-            color: #3b3b3b;
-        }
-        h6 {
-            color:  #646363;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #646363;
-            font-weight: bold;
-        }
-
-        input[type="text"], input[type="email"], input[type="password"] {
-            width: 60%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            width: 100%;
-            background-color: rgb(170, 125, 170);
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        input[type="submit"]:hover {
-            background-color: rgb(102, 2, 102);
-        }
-
-        input[type="button"] {
-            width: 18%;
-            background-color: white;
-            color: rgb(170, 125, 170);
-            padding: 8px;
-            border: 1px solid rgb(128, 53, 128);
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        input[type="button"]:hover {
-            background-color: rgb(102, 2, 102);
-        }
-
-        input, checkbox {
-            accent-color: rgb(102, 2, 102);
-        }
-        .eventyn {
-            width: 600px;
-            text-align:left;
-            padding: 2px;
-            color:  #646363;
-            font-size: 12px;
-            font-weight: bold;
-            line-height: 0.5cm;
-        }
-        .test {
-        	width: 115px;
-        	float: left;
-            padding: 5px;
-        }
-        .test2 {
-        	width: 115px;
-            height: 150px;
-        	float: left;
-            padding: 10px;
-        }
-    </style>
 </head>
+<link rel="stylesheet" href="../css/login.css">
 <body>
 	<%@ include file="dbconn.jsp"%>
     <div class="container">
@@ -105,7 +16,7 @@
         <hr style="border: solid 1px black;"></h6>
     
         <br>
-        <form id="membershipForm" onsubmit="return submitForm()">
+        <form action="crm_user_add2.jsp" id="membershipForm" onsubmit="return submitForm()">
             <label for="userId"><div class="test">아이디<span style="color: red;">*</span></div>
             <input type="text" id="userId" name="userId" placeholder="아이디를 입력해주세요" required>
             <input type="button" id="userIdCheck" name="userId" value="중복확인"></label>

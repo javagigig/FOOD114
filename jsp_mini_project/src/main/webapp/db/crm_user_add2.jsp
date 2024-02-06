@@ -12,15 +12,18 @@
 <body>
 	<%@ include file="dbconn.jsp" %>
 
-	<form action="crm_add_save.jsp" name="userAdd">
-	<h3>고객 추가</h3>
+	<form action="crm_add_save.jsp2" name="userAdd">
+	<h3>회 원 가 입</h3>
 	
 	<div>아이디: <input name="userId"></div>
+	<div>비밀번호: <input name="pwd"></div>
+	<div>비밀번호 확인: <input name="pwdCheck"></div>
 	<div>이름: <input name="name"></div>
 	<div>이메일: <input name="email"></div>
-	<div>휴대전화: <input name="phone"></div>
-	<div>주소(ex.oo시): <input name="city"></div>
-	<div>상세주소: <input name="district"></div>
+	<div>휴대폰: <input name="phone"></div>
+	<div>주소: <input name="city"></div>
+	<div>생년월일: <input name=bitht></div>
+	<div>성별: <input name="city"></div>
 	<div><input type="button" onclick="userSave()" value="저장하기"></div>
 	</form>
 	

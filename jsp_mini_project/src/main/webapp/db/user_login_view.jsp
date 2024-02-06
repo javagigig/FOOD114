@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Login Result</title>
 </head>
+<link rel="stylesheet" href="../css/up_del.css">
 <body>
     <%@ include file="dbconn.jsp" %>
     <%
@@ -42,13 +43,19 @@
                 </form>
     <%
             }
-        } else {        
+        } else { 
+        %>
+        <div class="container">
+		<div class="container-txt">
+		<br>
+        
+        <%     
             // 아이디가 존재하지 않거나 비밀번호가 일치하지 않는 경우
             out.println("아이디 또는 비밀번호를 확인해주세요!");
         }
         pstmt.close();
         conn.close();
-    %>
-    <input type="button" value="되돌아가기" onclick="history.back()">
+   		 %>
+    <input type="submit" value="되돌아가기" onclick="history.back()">
 </body>
 </html>

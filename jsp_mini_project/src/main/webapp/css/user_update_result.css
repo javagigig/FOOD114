@@ -1,0 +1,35 @@
+@charset "UTF-8";
+ body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 500px;
+            height: 150px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border : 1px solid rgb(221, 211, 218);
+            border-radius: 4px;        
+        }
+        .container-txt{
+        	text-align: center;
+        }
+		input[type="submit"] {
+            width: 50%;
+            position: relative;
+            background-color: rgb(170, 125, 170);
+            top: 40px;
+            left: 120px;
+            color: white;
+            padding: 10px;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(102, 2, 102);
+        }

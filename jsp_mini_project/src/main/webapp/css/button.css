@@ -1,0 +1,18 @@
+@charset "UTF-8";@charset "UTF-8";
+
+		input[type="submit"] {
+            position: relative;
+            background-color: rgb(170, 125, 170);
+            top: 40px;
+            left: 120px;
+            color: white;
+            padding: 10px;
+            border:none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(102, 2, 102);
+        }
